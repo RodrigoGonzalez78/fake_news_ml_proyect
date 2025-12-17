@@ -1,0 +1,5 @@
+Experimento,Tipo,Unidades,Parámetros,Tiempo (seg),Accuracy,Precision,Recall,F1-Score,AUC-ROC,Falsos Positivos,Falsos Negativos
+Exp1_Base_LSTM,lstm,64,364593,527.65,0.9643,0.9513,0.9668,0.959,0.9935,261,175
+Exp2_Simple_Dense,dense,32,320577,19.76,0.9696,0.9602,0.9699,0.965,0.9944,212,159
+Exp3_Complex_LSTM,lstm,264,1340309,3574.85,0.9646,0.9532,0.9655,0.9593,0.9932,250,182
+Exp4_CNN_Spatial,cnn,128,664769,90.33,0.9742,0.9603,0.9809,0.9705,0.9971,214,101

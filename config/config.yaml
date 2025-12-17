@@ -1,0 +1,44 @@
+paths:
+  raw_data: "./data/processed/data_limpio.csv"
+  output_models: "./models/"
+  tokenizer: "./models/tokenizer.pkl"
+
+global_params:
+  vocab_size: 20000
+  max_length: 500
+  trunc_type: 'post'
+  padding_type: 'post'
+  oov_tok: "<OOV>"
+  test_size: 0.2
+  val_size: 0.2
+  batch_size: 32
+  epochs: 5
+
+experiments:
+  # EXPERIMENTO 1: MODELO BASE
+  - name: "Exp1_Base_LSTM"
+    type: "lstm" 
+    embedding_dim: 16
+    units: 64
+    description: "Modelo base (LSTM Bidireccional 64u)"
+
+  # EXPERIMENTO 2: EFICIENCIA (Rápido)
+  - name: "Exp2_Simple_Dense"
+    type: "dense" 
+    embedding_dim: 16
+    units: 32
+    description: "Modelo simple y ligero (Dense)"
+
+  # EXPERIMENTO 3: CAPACIDAD OPTIMIZADA 
+  - name: "Exp3_Complex_LSTM"
+    type: "lstm"
+    embedding_dim: 32   
+    units: 264         
+    description: "Modelo aumentado controlado (LSTM Bidireccional 264u)"
+
+  # EXPERIMENTO 4: PATRONES LOCALES (CNN)
+  - name: "Exp4_CNN_Spatial"
+    type: "cnn"
+    embedding_dim: 32
+    units: 128         # En este caso, 'units' actuará como el número de filtros
+    description: "Modelo Convolucional (Conv1D) para detección de n-gramas"

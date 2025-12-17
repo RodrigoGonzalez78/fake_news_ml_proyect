@@ -1,0 +1,4 @@
+Experimento,Tipo,Parámetros,Accuracy Test,Loss Test
+Exp1_Base_LSTM,lstm,"364,593",96.41%,0.0934
+Exp2_Simple_Dense,dense,"320,577",96.96%,0.0967
+Exp3_Complex_LSTM,lstm,"914,689",95.95%,0.1070

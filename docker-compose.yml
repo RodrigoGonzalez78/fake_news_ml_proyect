@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    container_name: fake-news-detector
+    ports:
+      - "5001:5001"
+    volumes:
+      # Persist user feedback data
+      - ./data:/app/data
+      # Mount models to allow updates without rebuild
+      - ./models:/app/models:ro
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1

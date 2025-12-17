@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+tensorflow-cpu
+pyyaml
+matplotlib
+python-fasthtml
+beautifulsoup4
+requests
+deep-translator
+markdown
+uvicorn
